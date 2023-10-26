@@ -1,9 +1,24 @@
+import 'dart:js';
+
+import 'package:assignments/screens/post.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/boxes.dart';
 
 class Pizza extends StatelessWidget {
   const Pizza({super.key});
+
+    void _goToResultScreen() {
+    
+    Navigator.push(
+      context as BuildContext,
+      MaterialPageRoute(
+        builder: (context) {
+          return Post();
+        },
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
